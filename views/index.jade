@@ -1,0 +1,286 @@
+extends layout
+
+block content
+    header.circle--header
+      .bounds
+        .circle--fluid
+          .circle--fluid--cell
+              img(src='#{ProfileImage}')
+              h1 @#{ScreenName}
+          .circle--fluid--cell.align-right
+            nav
+              ul.circle--inline
+                li
+                  a Sign Out
+    
+    .bounds.app--body
+      .app--section--header
+        .grid-33
+          .app--section--heading
+            h2 Timeline
+        .grid-33
+          .app--section--heading
+            strong 129
+            h2 Following
+        .grid-33
+          .app--section--heading
+            h2 Direct Messages
+      .grid-33
+        .app--section
+          ul.app--tweet--list
+            li
+              strong.app--tweet--timestamp #{DateTweeted[0]}
+              a.app--tweet--author
+                .app--avatar(style='background-image: url("#{ProfileImage}")')
+                  img(src='#{ProfileImage}')
+                h4 #{Name}
+                |  @#{ScreenName}
+              p #{tweetText[0]}
+              ul.app--tweet--actions.circle--list--inline
+                li
+                  a.app--reply
+                    span.tooltip Reply
+                    svg(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewbox='0 0 38 28', xml:space='preserve')
+                      path(d='M24.9,10.5h-8.2V2.8c0-1.1-0.7-2.2-1.7-2.6c-1-0.4-2.2-0.2-3,0.6L0.8,12c-1.1,1.1-1.1,2.9,0,4L12,27.2\
+                      c0.5,0.5,1.2,0.8,2,0.8c0.4,0,0.7-0.1,1.1-0.2c1-0.4,1.7-1.5,1.7-2.6v-7.7h8.2c3.3,0,6,2.5,6,5.6v1.3c0,2,1.6,3.5,3.5,3.5\
+                      s3.5-1.6,3.5-3.5v-1.3C38,16.2,32.1,10.5,24.9,10.5z')
+                li
+                  a.app--retweet
+                    span.tooltip Retweet
+                    svg#Layer_1(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewbox='0 0 50 28', xml:space='preserve')
+                      path(d='M25.2,22.4H13.1v-9.3h4.7c1.1,0,2.2-0.7,2.6-1.7c0.4-1,0.2-2.3-0.6-3.1l-7.5-7.5c-1.1-1.1-2.9-1.1-4,0L0.8,8.3\
+                      c-0.8,0.8-1,2-0.6,3.1c0.4,1,1.5,1.7,2.6,1.7h4.7v12.1c0,1.5,1.3,2.8,2.8,2.8h14.9c1.5,0,2.8-1.3,2.8-2.8\
+                      C28,23.7,26.7,22.4,25.2,22.4z')
+                      path(d='M49.8,16.7c-0.4-1-1.5-1.7-2.6-1.7h-4.7V2.8c0-1.5-1.3-2.8-2.8-2.8H24.8C23.3,0,22,1.3,22,2.8s1.3,2.8,2.8,2.8h12.1v9.3\
+                      h-4.7c-1.1,0-2.2,0.7-2.6,1.7c-0.4,1-0.2,2.3,0.6,3.1l7.5,7.5c0.5,0.5,1.3,0.8,2,0.8c0.7,0,1.4-0.3,2-0.8l7.5-7.5\
+                      C50,18.9,50.2,17.7,49.8,16.7z')
+                    strong #{Retweets[0]}
+                li
+                  a.app--like
+                    span.tooltip Like
+                    svg(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewbox='0 0 35 28', xml:space='preserve')
+                      path.st0(d='M25.8,0c-3.6,0-6.8,2.1-8.3,5.1C16,2.1,12.9,0,9.2,0C4.1,0,0,4.1,0,9.2C0,21.4,17.3,28,17.3,28S35,21.3,35,9.2\
+                      C35,4.1,30.9,0,25.8,0L25.8,0z')
+                    strong #{TotalLikes[0]}
+            li
+              strong.app--tweet--timestamp #{DateTweeted[1]}
+              a.app--tweet--author
+                .app--avatar(style='background-image: url("#{ProfileImage}")')
+                  img(src='#{ProfileImage}')
+                h4 #{Name}
+                |  @#{ScreenName}
+              p #{tweetText[1]}
+              ul.app--tweet--actions.circle--list--inline
+                li
+                  a.app--reply
+                    span.tooltip Reply
+                    svg(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewbox='0 0 38 28', xml:space='preserve')
+                      path(d='M24.9,10.5h-8.2V2.8c0-1.1-0.7-2.2-1.7-2.6c-1-0.4-2.2-0.2-3,0.6L0.8,12c-1.1,1.1-1.1,2.9,0,4L12,27.2\
+                      c0.5,0.5,1.2,0.8,2,0.8c0.4,0,0.7-0.1,1.1-0.2c1-0.4,1.7-1.5,1.7-2.6v-7.7h8.2c3.3,0,6,2.5,6,5.6v1.3c0,2,1.6,3.5,3.5,3.5\
+                      s3.5-1.6,3.5-3.5v-1.3C38,16.2,32.1,10.5,24.9,10.5z')
+                li
+                  a.app--retweet
+                    span.tooltip Retweet
+                    svg#Layer_1(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewbox='0 0 50 28', xml:space='preserve')
+                      path(d='M25.2,22.4H13.1v-9.3h4.7c1.1,0,2.2-0.7,2.6-1.7c0.4-1,0.2-2.3-0.6-3.1l-7.5-7.5c-1.1-1.1-2.9-1.1-4,0L0.8,8.3\
+                      c-0.8,0.8-1,2-0.6,3.1c0.4,1,1.5,1.7,2.6,1.7h4.7v12.1c0,1.5,1.3,2.8,2.8,2.8h14.9c1.5,0,2.8-1.3,2.8-2.8\
+                      C28,23.7,26.7,22.4,25.2,22.4z')
+                      path(d='M49.8,16.7c-0.4-1-1.5-1.7-2.6-1.7h-4.7V2.8c0-1.5-1.3-2.8-2.8-2.8H24.8C23.3,0,22,1.3,22,2.8s1.3,2.8,2.8,2.8h12.1v9.3\
+                      h-4.7c-1.1,0-2.2,0.7-2.6,1.7c-0.4,1-0.2,2.3,0.6,3.1l7.5,7.5c0.5,0.5,1.3,0.8,2,0.8c0.7,0,1.4-0.3,2-0.8l7.5-7.5\
+                      C50,18.9,50.2,17.7,49.8,16.7z')
+                    strong #{Retweets[1]}
+                li
+                  a.app--like
+                    span.tooltip Like
+                    svg(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewbox='0 0 35 28', xml:space='preserve')
+                      path.st0(d='M25.8,0c-3.6,0-6.8,2.1-8.3,5.1C16,2.1,12.9,0,9.2,0C4.1,0,0,4.1,0,9.2C0,21.4,17.3,28,17.3,28S35,21.3,35,9.2\
+                      C35,4.1,30.9,0,25.8,0L25.8,0z')
+                    strong #{TotalLikes[1]}
+            li
+              strong.app--tweet--timestamp #{DateTweeted[2]}
+              a.app--tweet--author
+                .app--avatar(style='background-image: url("#{ProfileImage}")')
+                  img(src='#{ProfileImage}')
+                h4 #{Name}
+                |  @#{ScreenName}
+              p #{tweetText[2]}
+              ul.app--tweet--actions.circle--list--inline
+                li
+                  a.app--reply
+                    span.tooltip Reply
+                    svg(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewbox='0 0 38 28', xml:space='preserve')
+                      path(d='M24.9,10.5h-8.2V2.8c0-1.1-0.7-2.2-1.7-2.6c-1-0.4-2.2-0.2-3,0.6L0.8,12c-1.1,1.1-1.1,2.9,0,4L12,27.2\
+                      c0.5,0.5,1.2,0.8,2,0.8c0.4,0,0.7-0.1,1.1-0.2c1-0.4,1.7-1.5,1.7-2.6v-7.7h8.2c3.3,0,6,2.5,6,5.6v1.3c0,2,1.6,3.5,3.5,3.5\
+                      s3.5-1.6,3.5-3.5v-1.3C38,16.2,32.1,10.5,24.9,10.5z')
+                li
+                  a.app--retweet
+                    span.tooltip Retweet
+                    svg#Layer_1(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewbox='0 0 50 28', xml:space='preserve')
+                      path(d='M25.2,22.4H13.1v-9.3h4.7c1.1,0,2.2-0.7,2.6-1.7c0.4-1,0.2-2.3-0.6-3.1l-7.5-7.5c-1.1-1.1-2.9-1.1-4,0L0.8,8.3\
+                      c-0.8,0.8-1,2-0.6,3.1c0.4,1,1.5,1.7,2.6,1.7h4.7v12.1c0,1.5,1.3,2.8,2.8,2.8h14.9c1.5,0,2.8-1.3,2.8-2.8\
+                      C28,23.7,26.7,22.4,25.2,22.4z')
+                      path(d='M49.8,16.7c-0.4-1-1.5-1.7-2.6-1.7h-4.7V2.8c0-1.5-1.3-2.8-2.8-2.8H24.8C23.3,0,22,1.3,22,2.8s1.3,2.8,2.8,2.8h12.1v9.3\
+                      h-4.7c-1.1,0-2.2,0.7-2.6,1.7c-0.4,1-0.2,2.3,0.6,3.1l7.5,7.5c0.5,0.5,1.3,0.8,2,0.8c0.7,0,1.4-0.3,2-0.8l7.5-7.5\
+                      C50,18.9,50.2,17.7,49.8,16.7z')
+                    strong #{Retweets[2]}
+                li
+                  a.app--like
+                    span.tooltip Like
+                    svg(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewbox='0 0 35 28', xml:space='preserve')
+                      path.st0(d='M25.8,0c-3.6,0-6.8,2.1-8.3,5.1C16,2.1,12.9,0,9.2,0C4.1,0,0,4.1,0,9.2C0,21.4,17.3,28,17.3,28S35,21.3,35,9.2\
+                      C35,4.1,30.9,0,25.8,0L25.8,0z')
+                    strong #{TotalLikes[2]}
+            li
+              strong.app--tweet--timestamp #{DateTweeted[3]}
+              a.app--tweet--author
+                .app--avatar(style='background-image: url("#{ProfileImage}")')
+                  img(src='#{ProfileImage}')
+                h4 #{Name}
+                |  @#{ScreenName}
+              p #{tweetText[3]}
+              ul.app--tweet--actions.circle--list--inline
+                li
+                  a.app--reply
+                    span.tooltip Reply
+                    svg(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewbox='0 0 38 28', xml:space='preserve')
+                      path(d='M24.9,10.5h-8.2V2.8c0-1.1-0.7-2.2-1.7-2.6c-1-0.4-2.2-0.2-3,0.6L0.8,12c-1.1,1.1-1.1,2.9,0,4L12,27.2\
+                      c0.5,0.5,1.2,0.8,2,0.8c0.4,0,0.7-0.1,1.1-0.2c1-0.4,1.7-1.5,1.7-2.6v-7.7h8.2c3.3,0,6,2.5,6,5.6v1.3c0,2,1.6,3.5,3.5,3.5\
+                      s3.5-1.6,3.5-3.5v-1.3C38,16.2,32.1,10.5,24.9,10.5z')
+                li
+                  a.app--retweet
+                    span.tooltip Retweet
+                    svg#Layer_1(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewbox='0 0 50 28', xml:space='preserve')
+                      path(d='M25.2,22.4H13.1v-9.3h4.7c1.1,0,2.2-0.7,2.6-1.7c0.4-1,0.2-2.3-0.6-3.1l-7.5-7.5c-1.1-1.1-2.9-1.1-4,0L0.8,8.3\
+                      c-0.8,0.8-1,2-0.6,3.1c0.4,1,1.5,1.7,2.6,1.7h4.7v12.1c0,1.5,1.3,2.8,2.8,2.8h14.9c1.5,0,2.8-1.3,2.8-2.8\
+                      C28,23.7,26.7,22.4,25.2,22.4z')
+                      path(d='M49.8,16.7c-0.4-1-1.5-1.7-2.6-1.7h-4.7V2.8c0-1.5-1.3-2.8-2.8-2.8H24.8C23.3,0,22,1.3,22,2.8s1.3,2.8,2.8,2.8h12.1v9.3\
+                      h-4.7c-1.1,0-2.2,0.7-2.6,1.7c-0.4,1-0.2,2.3,0.6,3.1l7.5,7.5c0.5,0.5,1.3,0.8,2,0.8c0.7,0,1.4-0.3,2-0.8l7.5-7.5\
+                      C50,18.9,50.2,17.7,49.8,16.7z')
+                    strong #{Retweets[3]}
+                li
+                  a.app--like
+                    span.tooltip Like
+                    svg(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewbox='0 0 35 28', xml:space='preserve')
+                      path.st0(d='M25.8,0c-3.6,0-6.8,2.1-8.3,5.1C16,2.1,12.9,0,9.2,0C4.1,0,0,4.1,0,9.2C0,21.4,17.3,28,17.3,28S35,21.3,35,9.2\
+                      C35,4.1,30.9,0,25.8,0L25.8,0z')
+                    strong #{TotalLikes[3]}
+            li
+              strong.app--tweet--timestamp #{DateTweeted[4]}
+              a.app--tweet--author
+                .app--avatar(style='background-image: url("#{ProfileImage}")')
+                  img(src='#{ProfileImage}')
+                h4 #{Name}
+                |  @#{ScreenName}
+              p #{tweetText[4]}
+              ul.app--tweet--actions.circle--list--inline
+                li
+                  a.app--reply
+                    span.tooltip Reply
+                    svg(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewbox='0 0 38 28', xml:space='preserve')
+                      path(d='M24.9,10.5h-8.2V2.8c0-1.1-0.7-2.2-1.7-2.6c-1-0.4-2.2-0.2-3,0.6L0.8,12c-1.1,1.1-1.1,2.9,0,4L12,27.2\
+                      c0.5,0.5,1.2,0.8,2,0.8c0.4,0,0.7-0.1,1.1-0.2c1-0.4,1.7-1.5,1.7-2.6v-7.7h8.2c3.3,0,6,2.5,6,5.6v1.3c0,2,1.6,3.5,3.5,3.5\
+                      s3.5-1.6,3.5-3.5v-1.3C38,16.2,32.1,10.5,24.9,10.5z')
+                li
+                  a.app--retweet
+                    span.tooltip Retweet
+                    svg#Layer_1(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewbox='0 0 50 28', xml:space='preserve')
+                      path(d='M25.2,22.4H13.1v-9.3h4.7c1.1,0,2.2-0.7,2.6-1.7c0.4-1,0.2-2.3-0.6-3.1l-7.5-7.5c-1.1-1.1-2.9-1.1-4,0L0.8,8.3\
+                      c-0.8,0.8-1,2-0.6,3.1c0.4,1,1.5,1.7,2.6,1.7h4.7v12.1c0,1.5,1.3,2.8,2.8,2.8h14.9c1.5,0,2.8-1.3,2.8-2.8\
+                      C28,23.7,26.7,22.4,25.2,22.4z')
+                      path(d='M49.8,16.7c-0.4-1-1.5-1.7-2.6-1.7h-4.7V2.8c0-1.5-1.3-2.8-2.8-2.8H24.8C23.3,0,22,1.3,22,2.8s1.3,2.8,2.8,2.8h12.1v9.3\
+                      h-4.7c-1.1,0-2.2,0.7-2.6,1.7c-0.4,1-0.2,2.3,0.6,3.1l7.5,7.5c0.5,0.5,1.3,0.8,2,0.8c0.7,0,1.4-0.3,2-0.8l7.5-7.5\
+                      C50,18.9,50.2,17.7,49.8,16.7z')
+                    strong #{Retweets[4]}
+                li
+                  a.app--like
+                    span.tooltip Like
+                    svg(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewbox='0 0 35 28', xml:space='preserve')
+                      path.st0(d='M25.8,0c-3.6,0-6.8,2.1-8.3,5.1C16,2.1,12.9,0,9.2,0C4.1,0,0,4.1,0,9.2C0,21.4,17.3,28,17.3,28S35,21.3,35,9.2\
+                      C35,4.1,30.9,0,25.8,0L25.8,0z')
+                    strong #{TotalLikes[4]}
+              
+
+      .grid-33
+        .app--section
+          ul.app--user--list
+            li
+              .circle--fluid
+                .circle--fluid--cell.circle--fluid--primary
+                  a.app--tweet--author
+                    .app--avatar(style='background-image: url("#{ProfileImages[0]}")')
+                      img(src='#{ProfileImages[0]}')
+                    h4 #{FriendNames[0]}
+                    p @#{FriendScreenNames[0]}
+                .circle--fluid--cell
+            li
+              .circle--fluid
+                .circle--fluid--cell.circle--fluid--primary
+                  a.app--tweet--author
+                    .app--avatar(style='background-image: url("#{ProfileImages[1]}")')
+                      img(src='#{ProfileImages[1]}')
+                    h4 #{FriendNames[1]}
+                    p @#{FriendScreenNames[1]}
+                .circle--fluid--cell
+            li
+              .circle--fluid
+                .circle--fluid--cell.circle--fluid--primary
+                  a.app--tweet--author
+                    .app--avatar(style='background-image: url("#{ProfileImages[2]}")')
+                      img(src='#{ProfileImages[2]}')
+                    h4 #{FriendNames[2]}
+                    p @#{FriendScreenNames[2]}
+                .circle--fluid--cell
+            li
+              .circle--fluid
+                .circle--fluid--cell.circle--fluid--primary
+                  a.app--tweet--author
+                    .app--avatar(style='background-image: url("#{ProfileImages[3]}")')
+                      img(src='#{ProfileImages[3]}')
+                    h4 #{FriendNames[3]}
+                    p @#{FriendScreenNames[3]}
+                .circle--fluid--cell
+            li
+              .circle--fluid
+                .circle--fluid--cell.circle--fluid--primary
+                  a.app--tweet--author
+                    .app--avatar(style='background-image: url("#{ProfileImages[4]}")')
+                      img(src='#{ProfileImages[4]}')
+                    h4 #{FriendNames[4]}
+                    p @#{FriendScreenNames[4]}
+                .circle--fluid--cell
+      .grid-33
+        .app--section
+          ul.app--message--list
+            li
+              ul.app--message--conversation
+                li.app--message
+                  .app--avatar(style='background-image: url("#{SentByImage[0]}")')
+                    img(src='#{SentByImage[0]}')
+                  p.app--message--text #{MessageText[0]}                  
+                  p.app--message--timestamp #{DateSent[0]}
+
+                li.app--message
+                  .app--avatar(style='background-image: url("#{SentByImage[1]}")')
+                    img(src='#{SentByImage[1]}')
+                  p.app--message--text #{MessageText[1]} 
+
+                  p.app--message--timestamp #{DateSent[1]}
+
+                li.app--message
+                  .app--avatar(style='background-image: url("#{SentByImage[2]}")')
+                    img(src='#{SentByImage[2]}')
+                  p.app--message--text #{MessageText[2]}
+                  p.app--message--timestamp #{DateSent[2]}
+
+                li.app--message
+                  .app--avatar(style='background-image: url("#{SentByImage[3]}")')
+                    img(src='#{SentByImage[3]}')
+                  p.app--message--text #{MessageText[3]}
+                  p.app--message--timestamp #{DateSent[3]}
+
+                li.app--message
+                  .app--avatar(style='background-image: url("#{SentByImage[4]}")')
+                    img(src='#{SentByImage[4]}')
+                  p.app--message--text #{MessageText[4]}
+                  p.app--message--timestamp #{DateSent[4]}
+
