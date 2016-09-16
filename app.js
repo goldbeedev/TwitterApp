@@ -27,14 +27,6 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
 
-
-//start up the server
-app.listen(3000, function() {
-    console.log("The frontend server is running on port 3000!")
-});
-
-
-
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
