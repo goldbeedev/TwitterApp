@@ -19,9 +19,6 @@ var users = require('./routes/users');
 var app = express();
 
 
-//set up the twitter access keys
-
-
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
